@@ -17,7 +17,7 @@ $(document).ready(function() {
 	    }
 	    else {
 	    	// Add player name into as a last list item element
-	    	$('#playerList ul').append('<li class="singlePlayer">' + playerName + ' ' + '<span id="playerHp">' + playerHp + '</span>' + '<button id="removePlayer">Poista</button></li>');
+	    	$('#playerList ul').append('<li class="singlePlayer">' + playerName + ' ' + '<div class="hpIndicator"><span id="playerHp">' + playerHp + '</span></div>' + '<button id="removePlayer">X</button></li>');
 	    	
 	    	// Clear input fields
 	    	playerInput.val('');
@@ -39,8 +39,9 @@ $(document).ready(function() {
 
 	// Create play button and append it to chosen element
 	function createPlayButton() {
-		$('#createPlayer').append('<button id="playButton">Aloita peli</button>');
+		$('.ui-content').append('<button id="playButton" class="startButton">Aloita peli</button>');
 		$('#playButton').click(function(){
+			$('.ui-content').append('<button id="newGame" class="startButton">Uusi peli</button>');
 			$('.buttons').appendTo('.singlePlayer');
 			$('.buttons').show();
 			$('.addPlayer, #playButton, #removePlayer').remove();
@@ -49,50 +50,50 @@ $(document).ready(function() {
 			$('.addOneHP').click(function(){
 				// Change node string to int so values can be modified
 				// TODO These variables must be placed outside this functions scope for these are used multiple times
-				var hpString = $(this).parents('.singlePlayer').children('#playerHp').html();
+				var hpString = $(this).parents('.singlePlayer').children().children('#playerHp').html();
 				var hpInt = parseInt(hpString);
-				$(this).parents('.singlePlayer').children('#playerHp').html(hpInt + 1);
+				$(this).parents('.singlePlayer').children().children('#playerHp').html(hpInt + 1);
 			});
 			// Add five hit point
 			$('.addFiveHP').click(function(){
-				var hpString = $(this).parents('.singlePlayer').children('#playerHp').html();
+				var hpString = $(this).parents('.singlePlayer').children().children('#playerHp').html();
 				var hpInt = parseInt(hpString);
-				$(this).parents('.singlePlayer').children('#playerHp').html(hpInt + 5);
+				$(this).parents('.singlePlayer').children().children('#playerHp').html(hpInt + 5);
 			});
 			// Add ten hit point
 			$('.addTenHP').click(function(){
 				// Change node string to int so values can be modified
-				var hpString = $(this).parents('.singlePlayer').children('#playerHp').html();
+				var hpString = $(this).parents('.singlePlayer').children().children('#playerHp').html();
 				var hpInt = parseInt(hpString);
-				$(this).parents('.singlePlayer').children('#playerHp').html(hpInt + 10);
+				$(this).parents('.singlePlayer').children().children('#playerHp').html(hpInt + 10);
 			});
 			// Remove one hit point
 			$('.removeOneHP').click(function(){
 				// Change node string to int so values can be modified
-				var hpString = $(this).parents('.singlePlayer').children('#playerHp').html();
+				var hpString = $(this).parents('.singlePlayer').children().children('#playerHp').html();
 				var hpInt = parseInt(hpString);
-				$(this).parents('.singlePlayer').children('#playerHp').html(hpInt - 1);
+				$(this).parents('.singlePlayer').children().children('#playerHp').html(hpInt - 1);
 			});
 			// Remove five hit point
 			$('.removeFiveHP').click(function(){
 				// Change node string to int so values can be modified
-				var hpString = $(this).parents('.singlePlayer').children('#playerHp').html();
+				var hpString = $(this).parents('.singlePlayer').children().children('#playerHp').html();
 				var hpInt = parseInt(hpString);
-				$(this).parents('.singlePlayer').children('#playerHp').html(hpInt - 5);
+				$(this).parents('.singlePlayer').children().children('#playerHp').html(hpInt - 5);
 			});
 			// Remove ten hit point
 			$('.removeTenHP').click(function(){
 				// Change node string to int so values can be modified
-				var hpString = $(this).parents('.singlePlayer').children('#playerHp').html();
+				var hpString = $(this).parents('.singlePlayer').children().children('#playerHp').html();
 				var hpInt = parseInt(hpString);
-				$(this).parents('.singlePlayer').children('#playerHp').html(hpInt - 10);
+				$(this).parents('.singlePlayer').children().children('#playerHp').html(hpInt - 10);
+			});
+			$('#newGame').click(function(){
+				location.reload();
 			});
 
 		});
 	}
-	$('#newGame').click(function(){
-    	location.reload();
-	});
 	function addHp() {
 		/*var hpString = $(this).parents('.singlePlayer').children('#playerHp').html();
 		var hpInt = parseInt(hpString);
