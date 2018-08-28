@@ -1,0 +1,54 @@
+html body.ui-overlay-c {
+	background-color: #eddcb5 !important;
+}
+ul {
+	list-style: none;
+	padding: 0;
+}
+ul li {
+	margin: 2rem 0;
+	font-size: 1.5rem;
+}
+
+#playerHp {
+	border-radius: 100%;
+	border: 2px solid black;
+    text-shadow: white 1px 1px;
+    padding: .5rem;
+	background: #1f843a; /* Old browsers */
+	background: -moz-linear-gradient(top, #1f843a 0%, #7eec61 50%, #1f843a 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #1f843a 0%,#7eec61 50%,#1f843a 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #1f843a 0%,#7eec61 50%,#1f843a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1f843a', endColorstr='#1f843a',GradientType=0 ); /* IE6-9 */
+}
+.addPlayer {
+	display: flex;
+	flex-direction: column;
+}
+
+.addPlayer input.ui-input-text {
+	margin: .5rem 0;
+	padding: 1rem;
+	border-radius: 0;
+}
+
+.buttons {
+	margin: 1rem 0;
+}
+.buttons button {
+	padding: 1rem;
+    border-radius: 5px;
+    width: 5rem;
+    margin: 1rem;
+    font-size: 1.1rem;
+}
+.buttons button:first-child {
+	margin-left: 0;
+}
+.additional button {
+	background: #66e666;
+}
+
+.substractional button {
+	background: #ff0505;
+}
