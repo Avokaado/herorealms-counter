@@ -63,11 +63,10 @@
         },
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "HRC"
-        }
-    },
-    "dependent_plugins": {
+        },
         "cordova-plugin-file": {
             "PACKAGE_NAME": "HRC"
         }
-    }
+    },
+    "dependent_plugins": {}
 }
