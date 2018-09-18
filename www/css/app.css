@@ -42,11 +42,7 @@ ul li {
 	text-align: center;
 	width: 2rem;
 	padding: .5rem;
-	background: #1f843a; /* Old browsers */
-	background: -moz-linear-gradient(top, #1f843a 0%, #7eec61 50%, #1f843a 100%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(top, #1f843a 0%,#7eec61 50%,#1f843a 100%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(to bottom, #1f843a 0%,#7eec61 50%,#1f843a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1f843a', endColorstr='#1f843a',GradientType=0 ); /* IE6-9 */
+	background: #1f843a;
 }
 #removePlayer {
     font-family: 'Raleway', sans-serif;
@@ -73,7 +69,8 @@ ul li {
     padding: .7rem;
 }
 #playerHp {
-    text-shadow: white 1px 1px;
+	color: white;
+	text-shadow: black 1px 2px;
 }
 .addPlayer {
 	display: flex;
